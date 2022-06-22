@@ -1,0 +1,53 @@
+
+      .login-form {
+        max-width: 300px;
+      }
+
+      .imgDiv{
+        width: 100%;
+        vertical-align: middle;
+        margin-bottom: 40px;
+      }
+    
+
+      .login-form-margin {
+        margin-bottom: 26px;
+      }
+
+      .login-form-forgot {
+        float: right;
+      }
+
+      .login-form-button {
+        width: 100%;
+      }
+
+      .child{
+        /* border: 2px solid black; */
+        padding: 50px;
+        position: absolute;
+        width: 380px;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        background: white;
+        box-shadow: 1px 1px 15px -7px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin-bottom: 32px;
+        
+      }
+    
+      .parent{
+        width: 100%;
+        height: 90.2vh;
+        position: relative;
+      }
+
+      button{
+        background-color: #001529;
+        border: none;
+      }
+
+     

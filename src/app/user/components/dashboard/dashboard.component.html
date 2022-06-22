@@ -1,0 +1,39 @@
+<div class="bg" style="background-color: #F8F8F8;">
+    <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Working...">
+
+        <div nz-row style="padding: 30px;">
+            <div nz-col nzSpan="7">
+                <nz-radio-group nzButtonStyle="solid" [(ngModel)]="radioValue" (ngModelChange)="categorieChanged($event)">
+                    <label style="height: 100px; width: 100%;" *ngFor="let categorie of categories" nz-radio-button [nzValue]="categorie.strCategory">
+                        <img height="100px" [src]="categorie.strCategoryThumb" />
+                        {{categorie.strCategory}}
+                    </label>
+                  </nz-radio-group>
+            </div>
+            <div nz-col nzSpan="16" style="margin-left: 4px;">
+                    <div nz-row>
+                        <div nz-col nzSpan="8" *ngFor="let meal of meals">
+                            <nz-card nzHoverable style="width:100%; padding: 10px;" [nzCover]="coverTemplate"
+                                [nzActions]="[actionSetting, actionEdit]">
+                                <nz-card-meta [nzTitle]="meal.strMeal"></nz-card-meta>
+                              </nz-card>
+                              <ng-template #coverTemplate>
+                                <img  width="200px" alt="example" [src]="meal.strMealThumb" />
+                              </ng-template>
+
+                              <ng-template #actionSetting>
+                                <i (click)="addMealInCart(meal)" nz-icon nzType="shopping-cart" nzTheme="outline"></i>
+                              </ng-template>
+                              <ng-template #actionEdit>
+                                <i routerLink="/user/view-meal/{{meal.idMeal}}" nz-icon nzType="eye" nzTheme="outline"></i>
+                              </ng-template>
+                        </div>
+               
+                </div>
+            </div>
+          </div>
+
+
+
+</nz-spin>
+</div>

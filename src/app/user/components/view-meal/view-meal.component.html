@@ -1,0 +1,52 @@
+<div class="bg" style="background-color: #F8F8F8; min-height: 91vh;">
+    <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Working...">
+
+        <div nz-col nzSpan="24" style="padding: 50px;" *ngIf="meal">
+            <div nz-row >
+                <div nz-col nzSpan="24">
+                    <nz-card nzHoverable style="width:40%; padding: 10px; margin: auto;" [nzCover]="coverTemplate">
+                        <nz-card-meta [nzTitle]="meal.strMeal"></nz-card-meta>
+                        <p >Category : {{meal.strCategory}} </p>
+                        <p >Area : {{meal.strArea}} </p>
+
+
+                        <hr>
+                        <nz-tag *ngIf="meal.strIngredient1" [nzColor]="'#87d068'">{{meal.strIngredient1}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient2" [nzColor]="'#87d068'">{{meal.strIngredient2}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient3" [nzColor]="'#87d068'">{{meal.strIngredient3}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient4" [nzColor]="'#87d068'">{{meal.strIngredient4}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient5" [nzColor]="'#87d068'">{{meal.strIngredient5}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient6" [nzColor]="'#87d068'">{{meal.strIngredient6}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient7" [nzColor]="'#87d068'">{{meal.strIngredient7}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient8" [nzColor]="'#87d068'">{{meal.strIngredient8}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient9" [nzColor]="'#87d068'">{{meal.strIngredient9}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient10" [nzColor]="'#87d068'">{{meal.strIngredient10}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient11" [nzColor]="'#87d068'">{{meal.strIngredient11}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient12" [nzColor]="'#87d068'">{{meal.strIngredient12}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient13" [nzColor]="'#87d068'">{{meal.strIngredient13}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient14" [nzColor]="'#87d068'">{{meal.strIngredient14}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient15" [nzColor]="'#87d068'">{{meal.strIngredient15}}</nz-tag>
+                        <nz-tag *ngIf="meal.strIngredient16" [nzColor]="'#87d068'">{{meal.strIngredient16}}</nz-tag>
+
+                        
+                        <nz-collapse nzAccordion style="margin-top: 20px;">
+                            <nz-collapse-panel [nzHeader]="'Instructions'" [nzActive]="false">
+                              <p> {{meal.strInstructions}}</p>
+                            </nz-collapse-panel>
+                           
+                          </nz-collapse>
+                      </nz-card>
+                      <ng-template #coverTemplate>
+                        <img  alt="example" [src]="meal.strMealThumb" />
+                      </ng-template>
+
+                      
+                </div>
+       
+        </div>
+    </div>
+
+
+
+    </nz-spin>
+</div>

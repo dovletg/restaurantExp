@@ -1,0 +1,77 @@
+<div class="bg" style="background-color: #F8F8F8; min-height: 91vh;">
+    <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Working...">
+
+        <div nz-row style="padding: 30px;" *ngIf="order">
+            <div nz-col nzSpan="7">
+                <nz-card nzHoverable style="width:100%; padding: 10px;">
+                    <form class="row" nz-form  [formGroup]="validateForm">
+                    <nz-form-item>
+                        <nz-form-control nzHasFeedback nzErrorTip="This Input Is Required">
+                          <input type="number" formControlName="noPeople" nz-input placeholder="No of people" id="username"  />
+                        </nz-form-control>
+                      </nz-form-item>
+                      <nz-form-item>
+                        <nz-form-control nzHasFeedback nzErrorTip="This Input Is Required">
+                          <input type="number" formControlName="noTable" nz-input placeholder="No of table" id="username"  />
+                        </nz-form-control>
+                      </nz-form-item>
+
+                      <nz-form-item>
+                        <nz-form-control nzHasFeedback [nzXs]="24"
+                        nzErrorTip="This Input Is Required!">
+                        <nz-date-picker style="width: 100%;"
+                            nzFormat="yyyy-MM-dd HH:mm:ss"
+                            formControlName="date"
+                            
+                            nzShowTime="{ nzDefaultOpenValue: timeDefaultValue }"
+                            ></nz-date-picker>
+                    </nz-form-control>
+                    </nz-form-item>
+                </form>
+                      <button nz-button (click)="placeOrder()" [disabled]="!validateForm.valid" class="login-form-button login-form-margin" [nzType]="'primary'">Place Order</button>
+                </nz-card>
+                <!-- <nz-radio-group nzButtonStyle="solid" [(ngModel)]="radioValue" (ngModelChange)="categorieChanged($event)">
+                    <label style="height: 100px; width: 100%;" *ngFor="let categorie of categories" nz-radio-button [nzValue]="categorie.strCategory">
+                        <img height="100px" [src]="categorie.strCategoryThumb" />
+                        {{categorie.strCategory}}
+                    </label>
+                  </nz-radio-group> -->
+            </div>
+            <div nz-col nzSpan="16" style="margin-left: 4px;">
+                    <div nz-row>
+                        <div nz-col nzSpan="8" *ngFor="let meal of order.mealDtoList">
+                            <nz-card nzHoverable style="width:100%; padding: 10px;" [nzCover]="coverTemplate"
+                                [nzActions]="[ actionEdit, actionDelete]">
+                                <nz-card-meta [nzTitle]="meal.title"></nz-card-meta>
+                                <p style="padding: 10px;">Quantity : {{meal.quantity}} 
+                                    <nz-button-group style="float: right;">
+                                    <button (click)="updateQuantity(meal.id,meal.quantity+1)" nz-button nzType="primary"><i nz-icon nzType="caret-up" nzTheme="outline"></i></button>
+                                    <button (click)="updateQuantity(meal.id,meal.quantity-1)" nz-button nzType="primary"><i nz-icon nzType="caret-down" nzTheme="outline"></i></button>
+                                  </nz-button-group></p>
+                              </nz-card>
+                              <ng-template #coverTemplate>
+                                <img  width="200px" alt="example" [src]="meal.img" />
+                              </ng-template>
+
+                              <ng-template #actionDelete>
+                                <i nz-icon (click)="deleteMeal(meal.id)" nzType="delete" nzTheme="outline"></i>
+                              </ng-template>
+                              <ng-template #actionEdit>
+                                <i routerLink="/user/view-meal/{{meal.mealId}}" nz-icon nzType="eye" nzTheme="outline"></i>
+                              </ng-template>
+                              <ng-template #actionSetting>
+                                <nz-button-group>
+                                    <button nz-button nzType="primary"><i nz-icon nzType="caret-up" nzTheme="outline"></i></button>
+                                    <button nz-button nzType="primary"><i nz-icon nzType="caret-down" nzTheme="outline"></i></button>
+                                  </nz-button-group>
+                              </ng-template>
+                        </div>
+               
+                </div>
+            </div>
+          </div>
+
+
+
+</nz-spin>
+</div>
