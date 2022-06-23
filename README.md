@@ -30,10 +30,10 @@
   ## _In Summary_
     This project includes making an online dinner reservation plus ordering your food ahead of time. Ths new experience is perfect for the couple/family/or friends that do not have a lot of extra time to stand and wait for their table, and then sit and wait for the waiter to take their order. Then more wait time... And finally, their food arrives. Our guests can also choose to make a table reservation without their food order, if they desire to do so.
     
-  ## ![Drawing of Website Framework]()
-  ## ![Database Scheme created Khine Zaw](https://github.com/ )
-  ## ![Logo created by Lisa Lenhart](https://github.com )
-  ## ![Dinning Room photo by Pixabay](https://www.pexels.com/fine-dinning.png)
+  ## ![See Below Drawing of Website Framework]()
+  ## ![See Below Database Scheme created Khine Zaw](https://github.com/ )
+  ## ![See Below Logo created by Lisa Lenhart](https://github.com )
+  ## ![See Below Dinning Room photo by Pixabay](https://www.pexels.com/fine-dinning.png)
   
   ## *Special Thank you to Pixabay for the use of their photo for our Revature project Two* 
   ## https://www.pexels.com/photo/architecture-ceiling-chairs-chandeliers-262047/)
